@@ -1,0 +1,9 @@
+.department-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    grid-gap: 3rem;
+  }
