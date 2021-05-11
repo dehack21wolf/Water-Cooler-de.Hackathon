@@ -3,6 +3,7 @@ import api from '../api'
 import Department from "./Department"
 
 class DepartmentInfo extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -11,7 +12,6 @@ class DepartmentInfo extends Component {
     }
 
     componentDidMount = async () => {
-        const id = this.props.match.params.id;
         await api.getDepartments.then(department => {
             this.setState({
                 departments = department.data.allDepartments

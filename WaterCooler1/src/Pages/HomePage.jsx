@@ -10,9 +10,7 @@ class HomePage extends Component {
             <div className="department-container">
                 <Department />
                 <Department />
-                <Department />
-                <Department />
-                <Department />
+
 
             </div>
 

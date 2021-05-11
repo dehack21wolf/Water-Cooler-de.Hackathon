@@ -9,7 +9,6 @@ const Department = (props) => {
   const [employees , setEmployees] = useState([]);
 
 
-
   // TODO: Deplay department as cards on the homepage
     return (        
       <>
@@ -20,8 +19,9 @@ const Department = (props) => {
           <Employee />
           <Employee />
           <Employee />
-
-
+          <Employee />
+          <Employee />
+          <Employee />
           <div className="department-name">{props.depName}</div>
         </div>
       </>
