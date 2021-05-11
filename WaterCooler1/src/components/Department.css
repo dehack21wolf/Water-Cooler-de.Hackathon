@@ -4,13 +4,22 @@
     padding: 1rem;
     background-color: #EEEEEE;
     border: 0.1rem solid #d0cfcf;
-    height: 14rem;
-    width: 14rem;
-    min-width: 14rem;
-    max-width: 14rem;
-    min-height: 14rem;
-    max-height: 14rem;
-
+    height: 15rem;
+    width: 15rem;
+    max-width: 15rem;
+    max-height: 15rem;
 }
+
+.employee-section {
+    height: 12rem;
+    overflow:auto;
+}
+
+.department-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
 
 
