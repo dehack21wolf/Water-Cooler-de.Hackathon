@@ -13,16 +13,20 @@ const Department = (props) => {
     return (        
       <>
         <div className="department-component">
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <Employee />
-          <div className="department-name">{props.depName}</div>
+          <div className="employee-section">
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+            <Employee />
+          </div>
+          <div className="department-name">Engineering</div>
         </div>
       </>
     );
