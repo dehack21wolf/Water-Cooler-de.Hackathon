@@ -2,6 +2,7 @@ import React from 'react';
 import Employee from './Employee';
 import "./Department.css";
 
+
 const Department = (props) => {
 
 
@@ -27,6 +28,7 @@ const Department = (props) => {
             <Employee {...employee}/>
             <Employee {...employee}/>
             <Employee {...employee}/>
+            
           </div>
           <div className="department-name">Engineering</div>
         </div>

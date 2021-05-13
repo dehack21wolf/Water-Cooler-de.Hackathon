@@ -2,8 +2,16 @@
 import React, { Component } from 'react';
 import Department from "../components/Department"
 import "./HomePage.css";
+import "../components/adminoverlay.css"
+import AdminOverlay from '../components/adminoverlay';
 
 
+const employee = {
+    name: "Alejandro",
+    email: "alejandroalainbrito@gmail.com",
+    about: "I like Hack.Diversity",
+    image: "./admin.png"
+  };
 class HomePage extends Component {
 
     constructor(props) {
@@ -13,7 +21,8 @@ class HomePage extends Component {
         };
 
     }
-
+   
+   
     componentDidMount() {
        
     }
@@ -30,13 +39,16 @@ class HomePage extends Component {
                     <Department />
                     <Department />
                     <Department />
+                    
                 </div>
 
-                <button className="admin-button" onClick={this.togglePopup}>Admin</button>
+                <div className="admin-section">
+                <AdminOverlay {...employee}/>
+          </div>
             </div>
    
         )
     }
 }
-    
+    //<button className="admin-button" onClick={this.togglePopup}>Admin </button>
     export default HomePage

@@ -15,6 +15,16 @@
     overflow:auto;
 }
 
+.admin-section {
+    height: 5rem;
+    margin: 1rem;
+    bottom:0;
+    right:0; 
+    position: fixed; 
+
+  }
+  
+
 .department-name {
     text-align: center;
     font-weight: bold;
