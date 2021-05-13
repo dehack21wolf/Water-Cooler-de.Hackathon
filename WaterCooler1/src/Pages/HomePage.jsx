@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import Department from "../components/Department"
 import "./HomePage.css";
 

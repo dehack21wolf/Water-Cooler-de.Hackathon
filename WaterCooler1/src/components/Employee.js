@@ -33,7 +33,7 @@ class Employee extends React.Component {
     render() {
         return (
           <span>
-          <img className="employee-avi" src={this.state.image} className="rounded-circle" alt="Employee" width="50" height="50" onClick={this.handleOpenModal} />
+          <img className="employee-avi" src={this.state.image}  alt="Employee" width="50" height="50" onClick={this.handleOpenModal} />
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="onRequestClose Example"
@@ -43,7 +43,7 @@ class Employee extends React.Component {
           >
             <button className="right" onClick={this.handleCloseModal}>X</button>
             <div className="center">
-            <img className="employee-avi" src="./employee.jpeg" className="rounded-circle" alt="Employee" width="200" height="200" />
+            <img className="employee-avi" src="./employee.jpeg"  alt="Employee" width="200" height="200" />
             <p>Name: {this.state.name}</p>
             <p>Email: {this.state.email} </p>
             <p>About Me: {this.state.about}</p>

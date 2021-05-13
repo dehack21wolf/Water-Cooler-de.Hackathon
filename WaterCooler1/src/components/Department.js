@@ -1,12 +1,12 @@
-import React, { useState , useEffect } from 'react';
+import React from 'react';
 import Employee from './Employee';
 import "./Department.css";
 
 const Department = (props) => {
 
 
-  const [depName , setDepName] = useState("");
-  const [employees , setEmployees] = useState([]);
+  //const [depName , setDepName] = useState("");
+  //const [employees , setEmployees] = useState([]);
 
   // sample object being passed for testing. Delete later
   const employee = {
