@@ -1,0 +1,25 @@
+
+.department-component {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #EEEEEE;
+    border: 0.1rem solid #d0cfcf;
+    height: 15rem;
+    width: 15rem;
+    max-width: 15rem;
+    max-height: 15rem;
+}
+
+.employee-section {
+    height: 12rem;
+    overflow:auto;
+}
+
+.department-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
