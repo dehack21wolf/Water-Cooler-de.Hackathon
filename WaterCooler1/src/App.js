@@ -6,10 +6,11 @@ import './App.css';
 import * as microsoftTeams from "@microsoft/teams-js";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Privacy from "./Privacy";
-import TermsOfUse from "./TermsOfUse";
-import Tab from "./Tab";
-import TabConfig from "./TabConfig";
+import Privacy from "./components/Privacy";
+import TermsOfUse from "./components/TermsOfUse";
+import Tab from "./components/Tab";
+import TabConfig from "./components/TabConfig";
+import HomePage from "./Pages/HomePage"
 
 /**
  * The main app which handles the initialization and routing
@@ -27,6 +28,7 @@ function App() {
       <Route exact path="/termsofuse" component={TermsOfUse} />
       <Route exact path="/tab" component={Tab} />
       <Route exact path="/config" component={TabConfig} />
+      <Route exact path="/" component={HomePage}/>
     </Router>
   );
 }
