@@ -43,10 +43,21 @@ class AdminOverlay extends React.Component {
           >
             <button className="right" onClick={this.handleCloseModal}>X</button>
             <div className="center">
-            <img className="employee-avi" alt="Employee"src="./admin.png"  width="200" height="200" />
-            <p>Name: {this.state.name}</p>
-            <p>Email: {this.state.email} </p>
-            <p>About Me: {this.state.about}</p>
+            <h1>Admin Login</h1>
+            <form>
+      <label>
+        <p>Username</p>
+        <input type="text" />
+      </label>
+      <label>
+        <p>Password</p>
+        <input type="password" />
+      </label>
+      <div>
+        <button type="submit">Submit</button>
+        <button type="submit">Cancel</button>
+      </div>
+    </form>
             </div>
           </ReactModal>
           </span>
