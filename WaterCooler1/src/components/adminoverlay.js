@@ -54,8 +54,8 @@ class AdminOverlay extends React.Component {
         <input type="password" />
       </label>
       <div>
-        <button type="submit">Submit</button>
-        <button type="submit">Cancel</button>
+        <button onClick={this.handleOpenModal} type="login">Login</button>
+        <button onClick={this.handleCloseModal} type="cancel">Cancel</button>
       </div>
     </form>
             </div>
