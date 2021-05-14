@@ -11,12 +11,10 @@ class AdminOverlay extends React.Component {
       super(props);
       this.state = {
         showModal: false,
-        name: props.name,
         email: props.email,
         about: props.about,
         image: props.image
       };
-    
       // binding
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -25,11 +23,10 @@ class AdminOverlay extends React.Component {
     handleOpenModal () {
       this.setState({ showModal: true });
     }
-    
     handleCloseModal () {
       this.setState({ showModal: false });
     }
-    
+
     render() {
         return (
           <span>  
@@ -46,20 +43,21 @@ class AdminOverlay extends React.Component {
             <h1>Admin Login</h1>
             <form>
       <label>
-        <p>Username</p>
-        <input type="text" />
+        <h4>User</h4>
+        <input className="box1" type="text" />
       </label>
       <label>
-        <p>Password</p>
-        <input type="password" />
+        <h4>Password</h4>
+        <input className="box1" type="password" />
       </label>
       <div>
-        <button onClick={this.handleOpenModal} type="login">Login</button>
-        <button onClick={this.handleCloseModal} type="cancel">Cancel</button>
+        <button className="login-button" onClick={this.handleOpenModal} type="login">Login</button>
+        <button className="cancel-button" onClick={this.handleCloseModal} type="cancel">Cancel</button>
       </div>
     </form>
             </div>
           </ReactModal>
+           
           </span>
         );
     }

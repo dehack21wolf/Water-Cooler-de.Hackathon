@@ -5,8 +5,8 @@ img {
   .Modal {
     position: absolute;
     top: 200px;
-    left: 650px;
-    right: 650px;
+    left: 750px;
+    right: 750px;
     bottom: 400px;
     background-color: papayawhip;
     border-radius: 25px;
@@ -29,4 +29,27 @@ img {
     position: absolute;
     right: 0px;
     border-top-right-radius: 5px;
+  }
+
+  .login-button {
+    height: 2rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    bottom:0;
+    right:0;  
+    background-color: yellowgreen;
+  }
+
+  .cancel-button {
+    height: 2rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    bottom:0;
+    right:0;  
+    background-color: red;
+  }
+  .box1 {
+    width: 13.5rem;
   }
