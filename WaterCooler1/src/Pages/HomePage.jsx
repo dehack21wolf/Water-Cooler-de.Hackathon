@@ -6,12 +6,6 @@ import "../components/adminoverlay.css"
 import AdminOverlay from '../components/adminoverlay';
 
 
-const employee = {
-    name: "Alejandro",
-    email: "alejandroalainbrito@gmail.com",
-    about: "I like Hack.Diversity",
-    image: "./admin.png"
-  };
 class HomePage extends Component {
 
     constructor(props) {
@@ -43,7 +37,7 @@ class HomePage extends Component {
                 </div>
 
                 <div className="admin-section">
-                <AdminOverlay {...employee}/>
+                <AdminOverlay />
           </div>
             </div>
    
