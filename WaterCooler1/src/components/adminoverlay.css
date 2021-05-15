@@ -7,7 +7,7 @@ img {
     top: 200px;
     left: 750px;
     right: 750px;
-    bottom: 400px;
+    bottom: 350px;
     background-color: papayawhip;
     border-radius: 25px;
   }
@@ -20,6 +20,7 @@ img {
     bottom: 0;
     background-color: rgba(128, 128, 128, 0.5);
   }
+
 
   .center {
     text-align: center;

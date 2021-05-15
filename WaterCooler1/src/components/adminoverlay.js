@@ -7,6 +7,7 @@ ReactModal.setAppElement('#root');
 class AdminOverlay extends React.Component {
     // create an Employee component using the props we are passed.
     // the props must have the 4 fields specified
+   
     constructor(props){
       super(props);
       this.state = {
@@ -18,6 +19,8 @@ class AdminOverlay extends React.Component {
       // binding
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
+      this.handleOpenModal1 = this.handleOpenModal.bind(this);
+      this.handleCloseModal1 = this.handleCloseModal.bind(this);
     }
     
     handleOpenModal () {
@@ -26,6 +29,13 @@ class AdminOverlay extends React.Component {
     handleCloseModal () {
       this.setState({ showModal: false });
     }
+
+    handleOpenModa1l () {
+        this.setState({ showModal1: true });
+      }
+      handleCloseModal1 () {
+        this.setState({ showModal1: false });
+      }
 
     render() {
         return (
@@ -51,13 +61,26 @@ class AdminOverlay extends React.Component {
         <input className="box1" type="password" />
       </label>
       <div>
-        <button className="login-button" onClick={this.handleOpenModal} type="login">Login</button>
+        <button className="login-button" onClick={this.handleOpenModal1} type="login">Login</button>
         <button className="cancel-button" onClick={this.handleCloseModal} type="cancel">Cancel</button>
       </div>
     </form>
             </div>
           </ReactModal>
            
+         
+
+          <ReactModal 
+             isOpen={this.state.showModal1}
+             contentLabel="onRequestClose Example"
+             onRequestClose={this.handleCloseModal1}
+             className="Modal1"
+             overlayClassName="Overlay1"
+          >
+            <button className="right" onClick={this.handleCloseModal1}>X</button>
+            <div className="center">
+            </div>
+          </ReactModal>
           </span>
         );
     }
