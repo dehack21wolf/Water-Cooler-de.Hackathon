@@ -1,6 +1,7 @@
 import React from 'react';
-import "./Employee.css"
+import "./Employee.css";
 import ReactModal from 'react-modal';
+import api from "../Api/index";
 
 ReactModal.setAppElement('#root');
 
@@ -11,10 +12,11 @@ class Employee extends React.Component {
       super(props);
       this.state = {
         showModal: false,
-        name: props.name,
-        email: props.email,
-        about: props.about,
-        image: props.image
+        name: '',
+        email: '',
+        about: '',
+        image: '',
+        id: props.id 
       };
     
       // binding
@@ -22,6 +24,18 @@ class Employee extends React.Component {
       this.handleCloseModal = this.handleCloseModal.bind(this);
     }
     
+    componentDidMount = async () => {
+      const id = this.state.id;
+      await api.getEmployee(id).then(employee => {
+          this.setState({
+              name: employee.data.name,
+              email: employee.data.email,
+              about: employee.data.about,
+              image: employee.data.image
+          })
+      })
+    }
+
     handleOpenModal () {
       this.setState({ showModal: true });
     }
@@ -43,7 +57,7 @@ class Employee extends React.Component {
           >
             <button className="right" onClick={this.handleCloseModal}>X</button>
             <div className="center">
-            <img className="employee-avi" src="./employee.jpeg"  alt="Employee" width="200" height="200" />
+            <img className="employee-avi" src={this.state.image}  alt="Employee" width="200" height="200" />
             <p>Name: {this.state.name}</p>
             <p>Email: {this.state.email} </p>
             <p>About Me: {this.state.about}</p>

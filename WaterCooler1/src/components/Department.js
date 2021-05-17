@@ -1,39 +1,38 @@
-import React from 'react';
-import Employee from './Employee';
+import React, { Component } from 'react'
+import apis from '../Api/index';
 import "./Department.css";
+import Employee from "./Employee"
 
-
-const Department = (props) => {
-
-
-  //const [depName , setDepName] = useState("");
-  //const [employees , setEmployees] = useState([]);
-
-  // sample object being passed for testing. Delete later
-  const employee = {
-    name: "Alejandro",
-    email: "alejandroalainbrito@gmail.com",
-    about: "I like Hack.Diversity",
-    image: "./employee.jpeg"
-  };
-
-  // TODO: Deplay department as cards on the homepage
-  // the {...employee} is the props we are passing to the Employee component. The component will display
-  // the props which are passed to it
-    return (        
-      <>
-        <div className="department-component">
-          <div className="employee-section">
-            <Employee {...employee}/>
-            <Employee {...employee}/>
-            <Employee {...employee}/>
-            <Employee {...employee}/>
-            
-          </div>
-          <div className="department-name">Engineering</div>
-        </div>
-      </>
-    );
+class Department extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+          id: props.id,
+          name: '',
+          employees: [],
+        }
+    }
+    componentDidMount = async () => {
+        const id = this.state.id
+        await apis.getDepartment(id).then(department => {
+            this.setState({
+              name: department.data.name,
+              employees: department.data.members
+            })
+        })
+    }
+    render() {
+      console.log(this.state.employees)
+        return (        
+            <>
+              <div className="department-component">
+                <div className="employee-section">
+                  { this.state.employees.map(employee => <Employee key={employee} id={employee}/>)}
+                </div>
+                <div className="department-name">{this.state.name}</div>
+              </div>
+            </>
+          );
+        }
 }
- 
-export default Department;
+export default Department

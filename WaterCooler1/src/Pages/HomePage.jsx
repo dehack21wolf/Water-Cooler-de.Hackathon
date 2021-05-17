@@ -1,48 +1,33 @@
-
 import React, { Component } from 'react';
 import Department from "../components/Department"
 import "./HomePage.css";
-import "../components/adminoverlay.css"
-import AdminOverlay from '../components/adminoverlay';
-
-
+import apis from '../Api/index';
 class HomePage extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
-            departments: []
+            departments: [],
+            isLoading: false,
         };
-
     }
-   
-   
-    componentDidMount() {
-       
+    componentDidMount = async () => {
+        await apis.getAllDepartments().then(departments => {
+            this.setState({
+                departments: departments.data,
+                isLoading: true
+            })
+        })
     }
-    
-
     render() {
         return (
             <div className="homepage-container">
                 <div className="department-container">
-                    <Department />
-                    <Department />
-                    <Department />
-                    <Department />
-                    <Department />
-                    <Department />
-                    <Department />
-                    
+                    { this.state.departments.map(department => <Department key={department._id} id={department._id}/> 
+                    )}
                 </div>
-
-                <div className="admin-section">
-                <AdminOverlay />
+                <button className="admin-button" onClick={this.togglePopup}>Admin </button>
           </div>
-            </div>
-   
         )
     }
 }
-    //<button className="admin-button" onClick={this.togglePopup}>Admin </button>
     export default HomePage
