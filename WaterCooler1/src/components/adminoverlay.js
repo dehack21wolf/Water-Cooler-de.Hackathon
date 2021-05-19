@@ -25,11 +25,11 @@ class AdminOverlay extends React.Component {
     handleCloseModal () {
       this.setState({ showModal: false });
     }
-
+    
     render() {
         return (
           <span>  
-          <button className="admin-button" onClick={this.handleOpenModal}>Admin </button>
+            <button className="admin-button" onClick={this.handleOpenModal}>Admin </button>
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="onRequestClose Example"
@@ -50,24 +50,12 @@ class AdminOverlay extends React.Component {
         <input className="box1" type="password" />
       </label>
       <div>
-        <button className="login-button" onClick={this.handleOpenModal1} type="login">Login</button>
+        <form action="/admin">
+        <button className="login-button" onClick={this.handleOpenModal} type="login">Login</button>
+        </form>
         <button className="cancel-button" onClick={this.handleCloseModal} type="cancel">Cancel</button>
       </div>
     </form>
-            </div>
-          </ReactModal>
-           
-         
-
-          <ReactModal 
-             isOpen={this.state.showModal1}
-             contentLabel="onRequestClose Example"
-             onRequestClose={this.handleCloseModal1}
-             className="Modal1"
-             overlayClassName="Overlay1"
-          >
-            <button className="right" onClick={this.handleCloseModal1}>X</button>
-            <div className="center">
             </div>
           </ReactModal>
           </span>

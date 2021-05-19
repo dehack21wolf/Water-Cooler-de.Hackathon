@@ -32,6 +32,19 @@ img {
     border-top-right-radius: 5px;
   }
 
+  .admin-button {
+    height: 2rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    position:fixed;
+    bottom:0;
+    right:0;  
+    background-color: yellowgreen;
+  }
+  
+  
+
   .login-button {
     height: 2rem;
     width: 6rem;

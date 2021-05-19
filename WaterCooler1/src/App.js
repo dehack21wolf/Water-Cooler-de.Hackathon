@@ -11,6 +11,7 @@ import TermsOfUse from "./components/TermsOfUse";
 import Tab from "./components/Tab";
 import TabConfig from "./components/TabConfig";
 import HomePage from "./Pages/HomePage"
+import AdminPage from "./Pages/AdminPage"
 
 /**
  * The main app which handles the initialization and routing
@@ -29,6 +30,7 @@ function App() {
       <Route exact path="/tab" component={Tab} />
       <Route exact path="/config" component={TabConfig} />
       <Route exact path="/" component={HomePage}/>
+      <Route exact path="/admin" component={AdminPage}/>
     </Router>
   );
 }
