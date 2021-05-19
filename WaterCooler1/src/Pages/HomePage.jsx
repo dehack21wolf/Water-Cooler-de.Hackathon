@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Department from "../components/Department"
 import "./HomePage.css";
 import apis from '../Api/index';
+
+
 class HomePage extends Component {
     constructor(props) {
         super(props);

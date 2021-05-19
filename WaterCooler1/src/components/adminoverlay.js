@@ -11,16 +11,12 @@ class AdminOverlay extends React.Component {
     constructor(props){
       super(props);
       this.state = {
-        showModal: false,
-        email: props.email,
-        about: props.about,
-        image: props.image
+        showModal: false
       };
+
       // binding
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
-      this.handleOpenModal1 = this.handleOpenModal.bind(this);
-      this.handleCloseModal1 = this.handleCloseModal.bind(this);
     }
     
     handleOpenModal () {
@@ -29,13 +25,6 @@ class AdminOverlay extends React.Component {
     handleCloseModal () {
       this.setState({ showModal: false });
     }
-
-    handleOpenModa1l () {
-        this.setState({ showModal1: true });
-      }
-      handleCloseModal1 () {
-        this.setState({ showModal1: false });
-      }
 
     render() {
         return (

@@ -5,22 +5,22 @@
     "id": "be7b0550-1480-4a9e-9068-a939ec746579",
     "packageName": "com.microsoft.teams.extension",
     "developer": {
-        "name": "Teams App, Inc.",
+        "name": "Team Wolf, Hack.Diversity 2021",
         "websiteUrl": "https://localhost:3000",
         "privacyUrl": "https://localhost:3000/privacy",
         "termsOfUseUrl": "https://localhost:3000/termsofuse"
     },
     "icons": {
-        "color": "color.png",
+        "color": "icon.png",
         "outline": "outline.png"
     },
     "name": {
-        "short": "WaterCooler1",
-        "full": ""
+        "short": "Water Cooler",
+        "full": "Water Cooler by Team Wolf"
     },
     "description": {
-        "short": "Short description for My Group Tab.",
-        "full": "Full description of My Group Tab."
+        "short": "An app to make remote teams feel more included",
+        "full": "Water Cooler's goal is to make geographically distributed teams feel more connected. At a quick glimpse, members of a Team can look at the Water Cooler Tab and see everyone in their organization, the departments/groups they belong to, and a customizable description of someone. It allows members to connect a name to a person very quickly and learn about them, all in a single tab!"
     },
     "accentColor": "#FFFFFF",
     "configurableTabs": [
