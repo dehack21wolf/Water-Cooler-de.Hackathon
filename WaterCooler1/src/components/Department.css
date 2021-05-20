@@ -3,7 +3,7 @@
     border-radius: 1rem;
     padding: 1rem;
     background-color: #EEEEEE;
-    border: 0.1rem solid #d0cfcf;
+    border: 0.15rem solid #d0cfcf;
     height: 15rem;
     width: 15rem;
     max-width: 15rem;
@@ -11,8 +11,8 @@
 }
 
 .employee-section {
-    height: 12rem;
-    overflow:auto;
+    height: 11rem;
+    overflow:scroll;
 }
 
 .admin-section {
@@ -29,6 +29,12 @@
     text-align: center;
     font-weight: bold;
     font-size: large;
+    max-height: 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    
 }
 
 

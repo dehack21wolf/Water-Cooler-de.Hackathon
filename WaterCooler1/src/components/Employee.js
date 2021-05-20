@@ -3,6 +3,7 @@ import "./Employee.css";
 import ReactModal from 'react-modal';
 import api from "../Api/index";
 
+
 ReactModal.setAppElement('#root');
 
 class Employee extends React.Component {
@@ -47,7 +48,7 @@ class Employee extends React.Component {
     render() {
         return (
           <span>
-          <img className="employee-avi" src={this.state.image}  alt="Employee" width="50" height="50" onClick={this.handleOpenModal} />
+          <img className="employee-avi" src={this.state.image} onError={(e)=>{e.target.onerror = null; e.target.src="./default-avi.png"}} alt="Employee"  width="50" height="50" onClick={this.handleOpenModal} />
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="onRequestClose Example"
@@ -59,7 +60,7 @@ class Employee extends React.Component {
             <div className="center">
             <img className="employee-avi" src={this.state.image}  alt="Employee" width="200" height="200" />
             <p>Name: {this.state.name}</p>
-            <p>Email: {this.state.email} </p>
+            Email: <a class="mailto" href="mailto:contact@test.com">{this.state.email}</a>
             <p>About Me: {this.state.about}</p>
             </div>
           </ReactModal>

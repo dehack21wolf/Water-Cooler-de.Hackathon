@@ -1,8 +1,10 @@
-img {
+.employee-avi {
     border-radius: 50%;
+    border: 0.15rem solid black;
     margin: 0.4rem;
     cursor: pointer;
   }
+
   .Modal {
     position: absolute;
     top: 200px;
@@ -31,4 +33,10 @@ img {
     right: 0px;
     border-top-right-radius: 5px;
     cursor: pointer;
+  }
+
+  .mailto{
+    display:inline;
+    width:100px;
+    height:20px;
   }
