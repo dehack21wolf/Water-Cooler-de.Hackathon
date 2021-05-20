@@ -1,0 +1,41 @@
+.Modal1 {
+    position: absolute;
+    top: 200px;
+    left: 720px;
+    right: 720px;
+    bottom: 400px;
+    background-color: papayawhip;
+    border-radius: 25px;
+  }
+
+  .Overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+
+
+  .create-button {
+    height: 2rem;
+    width: 9rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    position:fixed;
+    bottom:0;
+    right:0;  
+    background-color: yellowgreen;
+    cursor: pointer;
+  }
+  .add-button {
+    height: 4rem;
+    width: 6rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    bottom:0;
+    right:0;  
+    cursor: pointer;
+    background-color: yellowgreen;
+  }

@@ -3,6 +3,7 @@ import ReactTable from 'react-table-6'
 import "react-table-6/react-table.css";  
 import apis from '../Api/index'
 import styled from 'styled-components'
+import CreateDepartment from './CreateDepartment'
 
 const Delete = styled.div`
     color: #ff0000;
@@ -12,6 +13,8 @@ const Update = styled.div`
     color: #ef9b0f;
     cursor: pointer;
 `
+
+
 class ViewAndUpdate extends Component {
     updateName = event => {
         event.preventDefault()
@@ -23,6 +26,7 @@ class ViewAndUpdate extends Component {
         return <Update onClick={this.updateName}>View/Update</Update>
     }
 }
+
 
 class DeleteDepartment extends Component {
     deleteDepartment = event => {
@@ -43,11 +47,14 @@ class DeleteDepartment extends Component {
     }
 }
 
+
+
 class AdminPage extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             departments: [],
+            employees: [],
             isLoading: false,
         };
     }
@@ -56,6 +63,7 @@ class AdminPage extends Component {
         await apis.getAllDepartments().then(departments => {
             this.setState({
                 departments: departments.data,
+                employees: departments.data.members,
                 isLoading: true
             })
         })
@@ -103,6 +111,7 @@ class AdminPage extends Component {
                         defaultPageSize={10}
                         pageSizeOptions={[2,4,6,10]}
                     />
+                    <CreateDepartment />
                 
             </div>
         )
