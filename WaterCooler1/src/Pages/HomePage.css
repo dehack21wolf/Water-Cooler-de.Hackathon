@@ -17,9 +17,29 @@
   bottom:0;
   right:0;  
   background-color: yellowgreen;
+  cursor: pointer;
 }
 
-
+.login-button {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  bottom:0;
+  right:0;  
+  cursor: pointer;
+  background-color: yellowgreen;
+}
+.cancel-button {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  bottom:0;
+  right:0;  
+  cursor: pointer;
+  background-color: red;
+}
 
 @media only screen and (min-width:321px) and (max-width:768px) {
   .department-container {
