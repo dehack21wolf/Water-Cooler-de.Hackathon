@@ -1,9 +1,4 @@
-img {
-    border-radius: 50%;
-    margin: 0.4rem;
-    cursor: pointer;
-  }
-  .Modal {
+.Modal1 {
     position: absolute;
     top: 200px;
     left: 720px;
@@ -13,22 +8,11 @@ img {
     border-radius: 25px;
   }
 
-  .Overlay {
+  .Overlay1 {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(128, 128, 128, 0.5);
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .right {
-    position: absolute;
-    right: 0px;
-    border-top-right-radius: 5px;
-    cursor: pointer;
   }

@@ -38,3 +38,24 @@
 
 
 
+
+.login-button {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  bottom:0;
+  right:0;  
+  cursor: pointer;
+  background-color: yellowgreen;
+}
+.cancel-button {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  bottom:0;
+  right:0;  
+  cursor: pointer;
+  background-color: red;
+}

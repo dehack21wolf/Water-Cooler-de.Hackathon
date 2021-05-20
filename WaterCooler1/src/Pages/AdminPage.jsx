@@ -28,9 +28,7 @@ class AdminPage extends Component {
                     )}
                 </div>
           </div>
-
           //<button className="admin-button" onClick={AdminOverlay.handleOpenModal}>Admin </button>
-
         )
     }
 }
