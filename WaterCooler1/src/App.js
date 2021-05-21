@@ -27,7 +27,7 @@ function App() {
     <Router>
       <Route exact path="/privacy" component={Privacy} />
       <Route exact path="/termsofuse" component={TermsOfUse} />
-      <Route exact path="/tab" component={Tab} />
+      <Route exact path="/tab" component={HomePage} />
       <Route exact path="/config" component={TabConfig} />
       <Route exact path="/" component={HomePage}/>
       <Route exact path="/admin" component={AdminPage}/>

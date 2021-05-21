@@ -2,8 +2,8 @@ import axios from 'axios'
 import https from 'https'
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/',
-    hostname: process.env.REACT_APP_API_HOST || 'http://localhost:5000/',
+    baseURL: 'http://awseb-e-k-awsebloa-10sdz1118bed4-1939878327.us-east-1.elb.amazonaws.com/',
+    hostname: 'http://awseb-e-k-awsebloa-10sdz1118bed4-1939878327.us-east-1.elb.amazonaws.com/',
     httpsAgent: https.Agent({
         rejectUnauthorized: false,
     }),
