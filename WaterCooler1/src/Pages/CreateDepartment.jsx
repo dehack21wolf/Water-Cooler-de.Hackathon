@@ -20,6 +20,15 @@ createDep = async () => {
     })
 }
 */
+function getOptions() {
+  var x = document.getElementById("mySelect");
+  var txt = "";
+  var i;
+  for (i = 0; i < x.length; i++) {
+    txt = txt + " " + x.options[i].text;
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
 
 class CreateDepartment extends Component {
     constructor(props){
@@ -64,25 +73,27 @@ class CreateDepartment extends Component {
            <button className="right" onClick={this.handleCloseModal}>X</button>
            <div className="center">
            <h1>Create Department</h1>
-           <form>
+      <form>
      <label>
        <h4>Department Name</h4>
        <input className="box1" type="text" />
      </label>
      <label>
        <h4>Members to add</h4>
-       <select>
-       <input type="checkbox"></input>{ this.state.employees.map(employee => 
-       <option key={employee.name} value={employee.name}>{employee.name}</option>)}
-       </select>
-
+       { this.state.employees.map(employee => 
+       <div key={employee._id} >
+       <input type ="checkbox" id={employee._id} key={employee._id} value={employee.name} />
+       <label for={employee._id}>{employee.name}</label>
+      </div>
+       )}
      </label>
+     </form>
      <div>
-       <form action="/departments/create">
+       <form>
        <button className="add-button" onClick={this.handleOpenModal} type="login">Add Department</button>
        </form>
      </div>
-   </form>
+   
            </div>
          </ReactModal>
          </span>
