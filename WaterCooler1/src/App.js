@@ -12,6 +12,7 @@ import Tab from "./components/Tab";
 import TabConfig from "./components/TabConfig";
 import HomePage from "./Pages/HomePage"
 import AdminPage from "./Pages/AdminPage"
+import TestingAdmin from "./Pages/CreateDepartmentTest"
 
 /**
  * The main app which handles the initialization and routing
@@ -31,6 +32,7 @@ function App() {
       <Route exact path="/config" component={TabConfig} />
       <Route exact path="/" component={HomePage}/>
       <Route exact path="/admin" component={AdminPage}/>
+      <Route exact path="/admintest" component={TestingAdmin}/>
     </Router>
   );
 }
