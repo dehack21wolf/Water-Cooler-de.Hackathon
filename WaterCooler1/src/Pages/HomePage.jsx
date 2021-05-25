@@ -51,7 +51,7 @@ class HomePage extends Component {
             <button className="right" onClick={this.handleCloseModal}>X</button>
             <div className="center">
             <h1>Admin Login</h1>
-            <form>
+            
       <label>
         <h4>User</h4>
         <input className="box1" type="text" />
@@ -66,7 +66,7 @@ class HomePage extends Component {
         </form>
         <button className="cancel-button" onClick={this.handleCloseModal} type="cancel">Cancel</button>
       </div>
-    </form>
+    
             </div>
           </ReactModal>
           </span>

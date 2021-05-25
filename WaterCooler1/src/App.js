@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Privacy from "./components/Privacy";
 import TermsOfUse from "./components/TermsOfUse";
-import Tab from "./components/Tab";
 import TabConfig from "./components/TabConfig";
 import HomePage from "./Pages/HomePage"
 import AdminPage from "./Pages/AdminPage"

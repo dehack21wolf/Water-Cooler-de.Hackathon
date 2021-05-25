@@ -1,0 +1,27 @@
+.container {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #EEEEEE;
+    border: 0.15rem solid #d0cfcf;
+    height: 20rem;
+    width: 50rem;
+    max-width: 40rem;
+    max-height: 20rem;
+    
+}
+.home-button {
+    height: 2rem;
+    width: 9rem;
+    border: solid 0.1rem black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    position:fixed;
+    bottom:0;
+    left:0;  
+    background-color: yellowgreen;
+    cursor: pointer;
+    text-decoration: none;
+    text-align:center ;
+    padding: 0.2rem;
+    color: black;
+}

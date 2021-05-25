@@ -46,6 +46,7 @@ class Employee extends React.Component {
     }
   
     render() {
+        const mailAdress = "mailto:" + this.state.email;
         return (
           <span>
           <img className="employee-avi" src={this.state.image} onError={(e)=>{e.target.onerror = null; e.target.src="./default-avi.png"}} alt="Employee"  width="50" height="50" onClick={this.handleOpenModal} />
@@ -60,7 +61,7 @@ class Employee extends React.Component {
             <div className="center">
             <img className="employee-avi" src={this.state.image}  alt="Employee" width="200" height="200" />
             <p>Name: {this.state.name}</p>
-            Email: <a class="mailto" href="mailto:contact@test.com">{this.state.email}</a>
+            Email: <a className="mailto" href={mailAdress}>{this.state.email}</a>
             <p>About Me: {this.state.about}</p>
             </div>
           </ReactModal>

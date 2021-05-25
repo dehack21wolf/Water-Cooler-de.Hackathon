@@ -6,9 +6,9 @@
     "packageName": "com.microsoft.teams.extension",
     "developer": {
         "name": "Team Wolf, Hack.Diversity 2021",
-        "websiteUrl": "https://localhost:3000",
-        "privacyUrl": "https://localhost:3000/privacy",
-        "termsOfUseUrl": "https://localhost:3000/termsofuse"
+        "websiteUrl": "https://alejandrobranch.d1l82rgq09q9c4.amplifyapp.com/",
+        "privacyUrl": "https://alejandrobranch.d1l82rgq09q9c4.amplifyapp.com//privacy",
+        "termsOfUseUrl": "https://alejandrobranch.d1l82rgq09q9c4.amplifyapp.com/termsofuse"
     },
     "icons": {
         "color": "icon.png",
@@ -25,7 +25,7 @@
     "accentColor": "#FFFFFF",
     "configurableTabs": [
         {
-            "configurationUrl": "https://localhost:3000/config",
+            "configurationUrl": "https://alejandrobranch.d1l82rgq09q9c4.amplifyapp.com/config",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
