@@ -1,9 +1,9 @@
 .Modal1 {
     position: absolute;
     top: 200px;
-    left: 720px;
-    right: 720px;
-    bottom: 400px;
+    left: 200px;
+    right: 200px;
+    bottom: 200px;
     background-color: papayawhip;
     border-radius: 25px;
   }
@@ -38,4 +38,11 @@
     right:0;  
     cursor: pointer;
     background-color: yellowgreen;
+    position: relative;
+  }
+
+  .members-list {
+    display: inline-block;
+    text-align: left;
+    font-size: large;
   }

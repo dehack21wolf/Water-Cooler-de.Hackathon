@@ -14,7 +14,6 @@ const Update = styled.div`
     cursor: pointer;
 `
 
-
 class ViewAndUpdate extends Component {
     updateName = event => {
         event.preventDefault()
@@ -70,13 +69,9 @@ class AdminPage extends Component {
     }
 
     render() {
-        const {departments, isLoading} = this.state;
+        const {departments} = this.state;
         
         const columns = [
-        {
-        Header: 'ID',
-        accessor: '_id'
-        },
         {
         Header: 'Name',
         accessor: 'name'
@@ -111,7 +106,7 @@ class AdminPage extends Component {
                         defaultPageSize={10}
                         pageSizeOptions={[2,4,6,10]}
                     />
-                    <CreateDepartment />
+                <CreateDepartment />
                 
             </div>
         )

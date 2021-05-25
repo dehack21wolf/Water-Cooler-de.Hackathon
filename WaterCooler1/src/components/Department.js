@@ -22,7 +22,6 @@ class Department extends Component {
         })
     }
     render() {
-      console.log(this.state.employees)
         return (        
             <>
               <div className="department-component">

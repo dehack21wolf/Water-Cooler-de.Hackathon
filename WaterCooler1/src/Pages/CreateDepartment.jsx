@@ -1,66 +1,64 @@
 import React, { Component } from 'react';
 import "./HomePage.css";
 import api from '../Api/index';
-import "./createdepartment.css";
+import "./CreateDepartment.css";
 import ReactModal from 'react-modal';
-
-
-/*
-createDep = async () => {
-    const {name, depname } = this.state
-
-    const payload = { name, depname}
-
-    await api.addBook(payload).then(res => {
-        window.alert(`Book created successfully`)
-        this.setState({
-            depname:'',
-            name:'',
-        })
-    })
-}
-*/
-function getOptions() {
-  var x = document.getElementById("mySelect");
-  var txt = "";
-  var i;
-  for (i = 0; i < x.length; i++) {
-    txt = txt + " " + x.options[i].text;
-  }
-  document.getElementById("demo").innerHTML = txt;
-}
 
 class CreateDepartment extends Component {
     constructor(props){
         super(props);
         this.state = {
           showModal: false,
-          employees: [],
-          name: '',
-          depname: '',
+          allEmployees: [],
         }
-         // binding
+        // binding
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
     }
+    
+
     componentDidMount = async () => {
         await api.getAllEmployees().then(employee => {
             this.setState({
-                employees: employee.data
+                allEmployees: employee.data,
             })
         })
       }
-    handleOpenModal () {
+
+      handleOpenModal () {
         this.setState({ showModal: true });
       }
       handleCloseModal () {
         this.setState({ showModal: false });
       }
-
+      
       render() {
-          //console.log(this.state.employees);
+        function postToDB() {
+            const name = document.querySelector("#departmentname").value;
+            const checkboxes = document.querySelectorAll(`input[name="members"]:checked`);
+            let values = [];
+            checkboxes.forEach((checkbox) => {
+                values.push(checkbox.value);
+            });
+            
+
+            const payload = { 
+                "name": name,
+                "members": values
+            }
+            
+            if(name !== "") {
+                api.createDepartment(payload)
+                window.alert("Department '" + name + "' successfully created!")
+                
+
+            } else {
+                window.alert("Please add a Department name.")
+            }
+            
+        }
+        
           return (
-             
             <span>
             <button className="create-button" onClick={this.handleOpenModal}>Create Department</button>  
             <ReactModal 
@@ -69,34 +67,34 @@ class CreateDepartment extends Component {
             onRequestClose={this.handleCloseModal}
             className="Modal1"
             overlayClassName="Overlay1"
-         >
-           <button className="right" onClick={this.handleCloseModal}>X</button>
-           <div className="center">
-           <h1>Create Department</h1>
-      <form>
-     <label>
-       <h4>Department Name</h4>
-       <input className="box1" type="text" />
-     </label>
-     <label>
-       <h4>Members to add</h4>
-       { this.state.employees.map(employee => 
-       <div key={employee._id} >
-       <input type ="checkbox" id={employee._id} key={employee._id} value={employee.name} />
-       <label for={employee._id}>{employee.name}</label>
-      </div>
-       )}
-     </label>
-     </form>
-     <div>
-       <form>
-       <button className="add-button" onClick={this.handleOpenModal} type="login">Add Department</button>
-       </form>
-     </div>
-   
-           </div>
-         </ReactModal>
-         </span>
+            >
+            <button className="right" onClick={this.handleCloseModal}>X</button>
+            <div className="center">
+            <h1>Create Department</h1>
+            <form>
+            <label>
+            <h4>Department Name</h4>
+            <input className="box1" id="departmentname" type="text" required />
+            </label>
+            <label>
+            <h4>Members to add</h4>
+            <div className="members-list">
+            { this.state.allEmployees.map(employee => 
+            <div key={employee._id} >
+            <input type="checkbox" name="members" id={employee.name} key={employee._id} value={employee._id} />
+            <label htmlFor={employee.name}>{employee.name}</label>
+            </div>
+            )}
+            </div>
+            </label>
+            <p></p>
+            <button className="add-button" onClick={postToDB}>Create New Department</button>
+            </form>
+            </div>
+            </ReactModal>
+            </span>
+            
+         
           )
       }
 }

@@ -1,9 +1,14 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+import "./TabConfig.css"
+import logo from "../icon.png"
 import React from 'react';
 import '../App.css';
 import * as microsoftTeams from "@microsoft/teams-js";
+import CreateDepartment from '../Pages/CreateDepartment'
+import { Link } from 'react-router-dom'
+
 
 /**
  * The 'Config' component is used to display your group tabs
@@ -23,7 +28,7 @@ class TabConfig extends React.Component {
 
         const baseUrl = `https://${window.location.hostname}:${window.location.port}`;
         microsoftTeams.settings.setSettings({
-          "suggestedDisplayName": "My Tab",
+          "suggestedDisplayName": "Water Cooler",
           "entityId": "Test",
           "contentUrl": baseUrl + "/tab",
           "websiteUrl": baseUrl + "/tab"
@@ -40,11 +45,14 @@ class TabConfig extends React.Component {
       microsoftTeams.settings.setValidityState(true);
   
       return (
-        <div>
-          <h1>Tab Configuration</h1>
-          <div>
-            This is where you will add your tab configuration options the user
-            can choose when the tab is added to your team/group chat.            
+        <div align="center">
+          <h1>Welcome to Water Cooler!</h1>
+          <img src={logo} alt="Water Cooler Logo"/>
+          <div className="container">
+            <p>Water Cooler's goal is to make geographically distributed teams feel more connected. At a quick glimpse, members of an organization can look at the Water Cooler app and see everyone in their organization, the departments/groups they belong to, and a customizable description of someone. It allows members to connect a name to a person very quickly and learn about them, all in a single app!</p>           
+            <p>Start by clicking the "Create Department" button below and creating your first group/department! This app automatically creates a list using this current team's roster. When you're finished, click the "Homepage" button. If you ever need to add/delete/update your departments, you can do so by logging into the admin page. <br /> (first time admin login credentials [username:root pass:Hack.Diversity])</p>
+            <CreateDepartment />
+            <Link to="/" className="home-button">Homepage</Link>
           </div>
         </div>
       );
